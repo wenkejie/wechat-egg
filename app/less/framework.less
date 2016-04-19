@@ -1,0 +1,275 @@
+// ================================
+// ============ 主体框架 ===========
+// ================================
+
+
+// 活动页面
+.wrap{
+	// 定位
+     // 。。。
+    // 盒模型
+     // padding: 0.75rem 0.938rem;
+
+    // 其他
+    background: #FFD780;
+     color: #666;
+     font-size: 14px;
+}
+
+.wrap-header{
+	position: relative;
+	img{
+		width: 100%;
+	}
+}
+
+.wrap-title{
+	display: block;
+	padding: 0.875em 0;margin-top: -1.250rem;
+	text-align: center;font-size: 18px;
+}
+
+.panel{
+	background: #FFD780;
+}
+
+.panel-header{
+	margin-top: 1.563rem;height: 1.563rem;
+	text-align: center;
+}
+
+.panel-title{
+	display: inline-block;vertical-align: middle;
+	height: 1.563rem;
+	
+	font-size: 0;
+	text-align: center;
+	&:before{
+		content: "";
+  		float: left;
+		width: 1.313rem;height: 1.563rem;
+		background: url(../img/title-left.png);
+		font-size: 16px;
+	}
+	&:after{
+		content: "";
+  		float: left;
+		width: 1.313rem;height: 1.563rem;
+		background: url(../img/title-right.png);
+		font-size: 16px;
+	}
+	>span{
+		float: left;
+		height: 1.563rem;line-height: 1.563rem;padding: 0 1.25rem;
+		background: #F9B255;color: #C65615;
+		font-size: 16px;
+	}
+}
+
+.panel-content{
+	padding: 1.875rem 1.563rem;
+	border-bottom: 1px dashed #fbc163;
+	.orange{
+		color: #e44a28;font-weight: bold;
+	}
+}
+
+
+// =================== 底部中奖纪录面板 =====================
+.panel-bottom{
+	.panel-content{
+		padding: 1.875rem 0;
+	}
+}
+
+.panel-content-cell{
+	padding: 0.875em 1.563rem;
+	border-bottom: 1px solid #ffd780;
+	background: #f9bc61;
+	font-size: 0;
+	&:nth-child(odd){
+		background: #F9B255;
+	}
+	> span{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 14px;
+	}
+	
+}
+
+.panel-hr-y{
+	display: inline-block;
+	height: 1.875rem;margin: 0 1.25rem;
+	vertical-align: middle;
+	font-size: 14px;border-left: 1px solid #f1a748;
+}
+
+
+.time-info{
+	display: inline-block;
+	margin-right: 1.875rem;
+	vertical-align: middle;
+	font-size: 0;
+	>span{
+		display: inline-block;
+		margin-right: 0.313rem;
+		vertical-align: middle;
+		font-size: 14px;
+	}
+	&:last-child{
+		margin-right: 0;
+	}
+}
+
+.time-icon{
+	width: 1.563rem;height: 1.563rem;line-height: 1.563rem;
+	background: #f38d21;border-radius: 50%;
+	text-align: center;color: #fff;
+}
+
+
+// ================= 敲蛋区 =======================
+@keyframes 'beatEmpty' {
+     from {
+     	background-position: -22.5rem 0;
+       
+     }
+    50% {
+      background-position: 0 0;
+    }
+   to {
+       background-position: -120px 0;
+    }
+}
+
+@keyframes 'beatRight' {
+     0%, 1%{  background-position: 0 0; }
+    2%, 98%{   background-position: -242px 0;}
+    99%, 100%{  background-position: -484px -1px; }
+}
+
+
+
+
+@keyframes 'hammerAnimation'{
+	0%{
+		transform:rotateZ(deg);
+	} 
+	24%{
+		transform:rotateZ(-20deg);
+	} 
+	50%{
+		transform:rotateZ(-40deg);
+	} 
+	75%{
+		transform:rotateZ(-20deg);
+	} 
+	100%{
+		transform:rotateZ(0deg);
+	}
+} 
+
+.beat-egg{
+	position: absolute;left: 0;bottom: 55%;right: 0;z-index: 11;
+	width: 100%;height: 6.875rem;
+	font-size: 0;text-align: center;
+}
+
+// .beat-egg-cell{
+// 	display: inline-block;vertical-align: middle;
+// 	width: 7.5rem;height: 6.875rem;
+// 	background: url(../img/egg-status.png) 0 0;
+// 	font-size: 14px;
+// 	&.middle{
+// 		margin: 2.5rem -1.250rem 0;
+// 	}
+// }
+
+.beat-egg-cell{
+	width: 242px;height: 215px;margin: 0 auto;
+	background: url(../img/new-egg.png) 0 0 no-repeat;
+	font-size: 14px;
+	// &.middle{
+	// 	margin: 2.5rem -1.250rem 0;
+	// }
+}
+
+.beat-egg-right{
+	/*调用animation属性，从而让按钮在载入页面时就具有动画效果*/
+    animation-name: "beatRight"; /*动画名称，需要跟@keyframes定义的名称一致*/
+    animation-duration: 0.07s;/*动画持续的时间长*/
+    animation-delay: 0.4s;/*动画开始时间*/
+    animation-direction: 1;
+    animation-fill-mode: forwards;
+}
+
+.beat-egg-empty{
+	/*调用animation属性，从而让按钮在载入页面时就具有动画效果*/
+    animation-name: "beatEmpty"; /*动画名称，需要跟@keyframes定义的名称一致*/
+    animation-duration: 5s;/*动画持续的时间长*/
+}
+
+.hammer{
+	position: absolute;left: 65%;top: -25px;z-index: 11;
+    transition: All 0.4s ease;
+}
+
+.hammer-beat{
+	width: 3.75rem;height: 4.5rem;
+	background: url(../img/hammer.png);
+	transition: All 0.1s ease 0.3s;
+	&.down{
+		transform: rotateZ(-45deg);
+	}
+}
+
+.hammer-animation{
+	animation:hammerAnimation 0.5s 0s infinite ease normal none;
+}
+
+
+
+//
+// 弹出结构
+// --------------------------------------------------
+
+.open-body{
+  overflow: hidden;opacity: 0;
+}
+
+
+.eui-openwin{
+  position: fixed;left: 50%;top: 30%;z-index: 150;
+  width: 80%;margin-left: -40%;
+  background: #faf7f4;border-radius: 5px;overflow: hidden;
+  font-size: 1.125rem;
+  // p{
+  //   padding: 15px 0;
+  //   border-bottom: 1px solid #586a72;
+  //   text-align: right;
+  // }
+}
+
+
+.eui-openwin-content{
+	padding: 1.125rem 1.563rem;
+	color: #999;
+	.orange{
+		color: #ff7f00;
+	}
+}
+
+.eui-openwin-footer{
+	border-top: 1px solid #e4e4e4;background: #fbfaf2;
+	height: 2.5rem;line-height: 2.5rem;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;
+	text-align: center;
+}
+
+.eui-openwin-shadow{
+  position: fixed;left: 0;right: 0;top: 0;bottom: 0;z-index: 100;
+  background: #000;opacity: 0.7;overflow: hidden;
+}
+
+
+

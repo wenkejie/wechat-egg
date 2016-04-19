@@ -1,0 +1,460 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font: normal 0.66666667em "helvetica neue", helvetica, verdana, tahoma, arial, sans-serif;
+  background: #ebebeb;
+  line-height: 1.3;
+}
+@media (min-width: 640px) {
+  body {
+    font-size: 1em;
+  }
+}
+@media (min-width: 960px) {
+  body {
+    font-size: 1.25em;
+  }
+}
+@media (min-width: 1100px) {
+  body {
+    font-size: 1.5em;
+  }
+}
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: inline-block;
+  font-weight: 500;
+}
+h2 {
+  font-size: 1.125rem;
+}
+h3 {
+  font-size: 1rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+input {
+  outline: none;
+}
+button,
+select,
+textarea {
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+textarea {
+  resize: none;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+}
+table {
+  border-spacing: 0;
+}
+a {
+  color: #0088e0;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+.hr {
+  height: 0px;
+  overflow: hidden;
+  margin: 5px 0;
+  border-top: 1px solid #eee;
+  clear: both;
+}
+.txt-orange {
+  color: orange;
+}
+.toe {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+.word-break {
+  word-wrap: break-word;
+  word-break: normal;
+}
+/*强制不换行*/
+.oneline {
+  white-space: nowrap;
+}
+/* 隐藏, 通常用来与 JS 配合 */
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+.hide {
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.wrap {
+  background: #FFD780;
+  color: #666;
+  font-size: 14px;
+}
+.wrap-header {
+  position: relative;
+}
+.wrap-header img {
+  width: 100%;
+}
+.wrap-title {
+  display: block;
+  padding: 0.875em 0;
+  margin-top: -1.25rem;
+  text-align: center;
+  font-size: 18px;
+}
+.panel {
+  background: #FFD780;
+}
+.panel-header {
+  margin-top: 1.563rem;
+  height: 1.563rem;
+  text-align: center;
+}
+.panel-title {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.563rem;
+  font-size: 0;
+  text-align: center;
+}
+.panel-title:before {
+  content: "";
+  float: left;
+  width: 1.313rem;
+  height: 1.563rem;
+  background: url(../img/title-left.png);
+  font-size: 16px;
+}
+.panel-title:after {
+  content: "";
+  float: left;
+  width: 1.313rem;
+  height: 1.563rem;
+  background: url(../img/title-right.png);
+  font-size: 16px;
+}
+.panel-title > span {
+  float: left;
+  height: 1.563rem;
+  line-height: 1.563rem;
+  padding: 0 1.25rem;
+  background: #F9B255;
+  color: #C65615;
+  font-size: 16px;
+}
+.panel-content {
+  padding: 1.875rem 1.563rem;
+  border-bottom: 1px dashed #fbc163;
+}
+.panel-content .orange {
+  color: #e44a28;
+  font-weight: bold;
+}
+.panel-bottom .panel-content {
+  padding: 1.875rem 0;
+}
+.panel-content-cell {
+  padding: 0.875em 1.563rem;
+  border-bottom: 1px solid #ffd780;
+  background: #f9bc61;
+  font-size: 0;
+}
+.panel-content-cell:nth-child(odd) {
+  background: #F9B255;
+}
+.panel-content-cell > span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+}
+.panel-hr-y {
+  display: inline-block;
+  height: 1.875rem;
+  margin: 0 1.25rem;
+  vertical-align: middle;
+  font-size: 14px;
+  border-left: 1px solid #f1a748;
+}
+.time-info {
+  display: inline-block;
+  margin-right: 1.875rem;
+  vertical-align: middle;
+  font-size: 0;
+}
+.time-info > span {
+  display: inline-block;
+  margin-right: 0.313rem;
+  vertical-align: middle;
+  font-size: 14px;
+}
+.time-info:last-child {
+  margin-right: 0;
+}
+.time-icon {
+  width: 1.563rem;
+  height: 1.563rem;
+  line-height: 1.563rem;
+  background: #f38d21;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+}
+@-webkit-keyframes 'beatEmpty' {
+  from {
+    background-position: -22.5rem 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -120px 0;
+  }
+}
+@keyframes 'beatEmpty' {
+  from {
+    background-position: -22.5rem 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -120px 0;
+  }
+}
+@-webkit-keyframes 'beatRight' {
+  0%,
+  1% {
+    background-position: 0 0;
+  }
+  2%,
+  98% {
+    background-position: -242px 0;
+  }
+  99%,
+  100% {
+    background-position: -484px -1px;
+  }
+}
+@keyframes 'beatRight' {
+  0%,
+  1% {
+    background-position: 0 0;
+  }
+  2%,
+  98% {
+    background-position: -242px 0;
+  }
+  99%,
+  100% {
+    background-position: -484px -1px;
+  }
+}
+@-webkit-keyframes 'hammerAnimation' {
+  0% {
+    -webkit-transform: rotateZ(deg);
+            transform: rotateZ(deg);
+  }
+  24% {
+    -webkit-transform: rotateZ(-20deg);
+            transform: rotateZ(-20deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-40deg);
+            transform: rotateZ(-40deg);
+  }
+  75% {
+    -webkit-transform: rotateZ(-20deg);
+            transform: rotateZ(-20deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+@keyframes 'hammerAnimation' {
+  0% {
+    -webkit-transform: rotateZ(deg);
+            transform: rotateZ(deg);
+  }
+  24% {
+    -webkit-transform: rotateZ(-20deg);
+            transform: rotateZ(-20deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-40deg);
+            transform: rotateZ(-40deg);
+  }
+  75% {
+    -webkit-transform: rotateZ(-20deg);
+            transform: rotateZ(-20deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+.beat-egg {
+  position: absolute;
+  left: 0;
+  bottom: 55%;
+  right: 0;
+  z-index: 11;
+  width: 100%;
+  height: 6.875rem;
+  font-size: 0;
+  text-align: center;
+}
+.beat-egg-cell {
+  width: 242px;
+  height: 215px;
+  margin: 0 auto;
+  background: url(../img/new-egg.png) 0 0 no-repeat;
+  font-size: 14px;
+}
+.beat-egg-right {
+  /*调用animation属性，从而让按钮在载入页面时就具有动画效果*/
+  -webkit-animation-name: "beatRight";
+          animation-name: "beatRight";
+  /*动画名称，需要跟@keyframes定义的名称一致*/
+  -webkit-animation-duration: 0.07s;
+          animation-duration: 0.07s;
+  /*动画持续的时间长*/
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  /*动画开始时间*/
+  -webkit-animation-direction: 1;
+          animation-direction: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.beat-egg-empty {
+  /*调用animation属性，从而让按钮在载入页面时就具有动画效果*/
+  -webkit-animation-name: "beatEmpty";
+          animation-name: "beatEmpty";
+  /*动画名称，需要跟@keyframes定义的名称一致*/
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  /*动画持续的时间长*/
+}
+.hammer {
+  position: absolute;
+  left: 65%;
+  top: -25px;
+  z-index: 11;
+  -webkit-transition: All 0.4s ease;
+          transition: All 0.4s ease;
+}
+.hammer-beat {
+  width: 3.75rem;
+  height: 4.5rem;
+  background: url(../img/hammer.png);
+  -webkit-transition: All 0.1s ease 0.3s;
+          transition: All 0.1s ease 0.3s;
+}
+.hammer-beat.down {
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+.hammer-animation {
+  -webkit-animation: hammerAnimation 0.5s 0s infinite ease normal none;
+          animation: hammerAnimation 0.5s 0s infinite ease normal none;
+}
+.open-body {
+  overflow: hidden;
+  opacity: 0;
+}
+.eui-openwin {
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  z-index: 150;
+  width: 80%;
+  margin-left: -40%;
+  background: #faf7f4;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 1.125rem;
+}
+.eui-openwin-content {
+  padding: 1.125rem 1.563rem;
+  color: #999;
+}
+.eui-openwin-content .orange {
+  color: #ff7f00;
+}
+.eui-openwin-footer {
+  border-top: 1px solid #e4e4e4;
+  background: #fbfaf2;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+}
+.eui-openwin-shadow {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  background: #000;
+  opacity: 0.7;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=maps/style.css.map */
